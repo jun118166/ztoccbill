@@ -16,7 +16,7 @@ export function Header({ activeTab, onTabChange }: HeaderProps) {
             </div>
             <div>
               <h1 className="text-2xl font-bold text-gray-900">
-                Excel订单导入系统
+                订单批量导入系统
               </h1>
               <p className="text-sm text-gray-500">多模板自动识别 · 智能字段映射</p>
             </div>
