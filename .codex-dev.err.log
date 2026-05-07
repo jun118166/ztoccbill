@@ -1,0 +1,909 @@
+ ⚠ Port 3000 is in use, trying 3001 instead.
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'D:\ztoccbill\.next\cache\webpack\client-development\3.pack.gz_' -> 'D:\ztoccbill\.next\cache\webpack\client-development\3.pack.gz'
+ ⨯ ./components/DataTable.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4mD:\ztoccbill\components\DataTable.tsx[0m:92:1]
+ [2m92[0m |  const hasUnmappedRequiredFields = requiredFields.some(rf => {
+ [2m93[0m |  return rows.some(row => !row.data[rf.field]);
+ [2m94[0m |  });
+ [2m95[0m |  return (<div className="bg-white rounded-lg shadow overflow-hidden">
+    : [31;1m          ^^^[0m
+ [2m96[0m |  <div className="p-4 bg-gray-50 border-b">
+ [2m97[0m |  <div className="flex items-center justify-between">
+ [2m98[0m |  <h3 className="text-lg font-semibold text-gray-800">数据预览</h3>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/DataTable.tsx
+./components/ImportPanel.tsx
+./app/page.tsx
+ ⨯ ./components/DataTable.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4mD:\ztoccbill\components\DataTable.tsx[0m:92:1]
+ [2m92[0m |  const hasUnmappedRequiredFields = requiredFields.some(rf => {
+ [2m93[0m |  return rows.some(row => !row.data[rf.field]);
+ [2m94[0m |  });
+ [2m95[0m |  return (<div className="bg-white rounded-lg shadow overflow-hidden">
+    : [31;1m          ^^^[0m
+ [2m96[0m |  <div className="p-4 bg-gray-50 border-b">
+ [2m97[0m |  <div className="flex items-center justify-between">
+ [2m98[0m |  <h3 className="text-lg font-semibold text-gray-800">数据预览</h3>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/DataTable.tsx
+./components/ImportPanel.tsx
+./app/page.tsx
+ ⨯ ./components/DataTable.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4mD:\ztoccbill\components\DataTable.tsx[0m:92:1]
+ [2m92[0m |  const hasUnmappedRequiredFields = requiredFields.some(rf => {
+ [2m93[0m |  return rows.some(row => !row.data[rf.field]);
+ [2m94[0m |  });
+ [2m95[0m |  return (<div className="bg-white rounded-lg shadow overflow-hidden">
+    : [31;1m          ^^^[0m
+ [2m96[0m |  <div className="p-4 bg-gray-50 border-b">
+ [2m97[0m |  <div className="flex items-center justify-between">
+ [2m98[0m |  <h3 className="text-lg font-semibold text-gray-800">数据预览</h3>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/DataTable.tsx
+./components/ImportPanel.tsx
+./app/page.tsx
+ ⨯ ./components/DataTable.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4mD:\ztoccbill\components\DataTable.tsx[0m:92:1]
+ [2m92[0m |  const hasUnmappedRequiredFields = requiredFields.some(rf => {
+ [2m93[0m |  return rows.some(row => !row.data[rf.field]);
+ [2m94[0m |  });
+ [2m95[0m |  return (<div className="bg-white rounded-lg shadow overflow-hidden">
+    : [31;1m          ^^^[0m
+ [2m96[0m |  <div className="p-4 bg-gray-800/80 border-b border-gray-700">
+ [2m97[0m |  <div className="flex items-center justify-between">
+ [2m98[0m |  <h3 className="text-lg font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">数据预览</h3>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/DataTable.tsx
+./components/ImportPanel.tsx
+./app/page.tsx
+ ⨯ ./components/DataTable.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4mD:\ztoccbill\components\DataTable.tsx[0m:92:1]
+ [2m92[0m |  const hasUnmappedRequiredFields = requiredFields.some(rf => {
+ [2m93[0m |  return rows.some(row => !row.data[rf.field]);
+ [2m94[0m |  });
+ [2m95[0m |  return (<div className="bg-gray-800/50 backdrop-blur rounded-xl border border-gray-700 shadow-xl shadow-blue-900/10 overflow-hidden">
+    : [31;1m          ^^^[0m
+ [2m96[0m |  <div className="p-4 bg-gray-800/80 border-b border-gray-700">
+ [2m97[0m |  <div className="flex items-center justify-between">
+ [2m98[0m |  <h3 className="text-lg font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">数据预览</h3>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/DataTable.tsx
+./components/ImportPanel.tsx
+./app/page.tsx
+ ⨯ ./components/DataTable.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4mD:\ztoccbill\components\DataTable.tsx[0m:92:1]
+ [2m92[0m |  const hasUnmappedRequiredFields = requiredFields.some(rf => {
+ [2m93[0m |  return rows.some(row => !row.data[rf.field]);
+ [2m94[0m |  });
+ [2m95[0m |  return (<div className="bg-gray-800/50 backdrop-blur rounded-xl border border-gray-700 shadow-xl shadow-blue-900/10 overflow-hidden">
+    : [31;1m          ^^^[0m
+ [2m96[0m |  <div className="p-4 bg-gray-800/80 border-b border-gray-700">
+ [2m97[0m |  <div className="flex items-center justify-between">
+ [2m98[0m |  <h3 className="text-lg font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">数据预览</h3>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/DataTable.tsx
+./components/ImportPanel.tsx
+./app/page.tsx
+ ⨯ ./components/DataTable.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4mD:\ztoccbill\components\DataTable.tsx[0m:92:1]
+ [2m92[0m |  const hasUnmappedRequiredFields = requiredFields.some(rf => {
+ [2m93[0m |  return rows.some(row => !row.data[rf.field]);
+ [2m94[0m |  });
+ [2m95[0m |  return (<div className="bg-gray-800/50 backdrop-blur rounded-xl border border-gray-700 shadow-xl shadow-blue-900/10 overflow-hidden">
+    : [31;1m          ^^^[0m
+ [2m96[0m |  <div className="p-4 bg-gray-800/80 border-b border-gray-700">
+ [2m97[0m |  <div className="flex items-center justify-between">
+ [2m98[0m |  <h3 className="text-lg font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">数据预览</h3>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/DataTable.tsx
+./components/ImportPanel.tsx
+./app/page.tsx
+ ⨯ ./components/DataTable.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4mD:\ztoccbill\components\DataTable.tsx[0m:92:1]
+ [2m92[0m |  const hasUnmappedRequiredFields = requiredFields.some(rf => {
+ [2m93[0m |  return rows.some(row => !row.data[rf.field]);
+ [2m94[0m |  });
+ [2m95[0m |  return (<div className="bg-gray-800/50 backdrop-blur rounded-xl border border-gray-700 shadow-xl shadow-blue-900/10 overflow-hidden">
+    : [31;1m          ^^^[0m
+ [2m96[0m |  <div className="p-4 bg-gray-800/80 border-b border-gray-700">
+ [2m97[0m |  <div className="flex items-center justify-between">
+ [2m98[0m |  <h3 className="text-lg font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">数据预览</h3>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/DataTable.tsx
+./components/ImportPanel.tsx
+./app/page.tsx
+ ⨯ ./components/DataTable.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4mD:\ztoccbill\components\DataTable.tsx[0m:92:1]
+ [2m92[0m |  const hasUnmappedRequiredFields = requiredFields.some(rf => {
+ [2m93[0m |  return rows.some(row => !row.data[rf.field]);
+ [2m94[0m |  });
+ [2m95[0m |  return (<div className="bg-gray-800/50 backdrop-blur rounded-xl border border-gray-700 shadow-xl shadow-blue-900/10 overflow-hidden">
+    : [31;1m          ^^^[0m
+ [2m96[0m |  <div className="p-4 bg-gray-800/80 border-b border-gray-700">
+ [2m97[0m |  <div className="flex items-center justify-between">
+ [2m98[0m |  <h3 className="text-lg font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">数据预览</h3>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/DataTable.tsx
+./components/ImportPanel.tsx
+./app/page.tsx
+ ⨯ ./components/DataTable.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4mD:\ztoccbill\components\DataTable.tsx[0m:92:1]
+ [2m92[0m |  const hasUnmappedRequiredFields = requiredFields.some(rf => {
+ [2m93[0m |  return rows.some(row => !row.data[rf.field]);
+ [2m94[0m |  });
+ [2m95[0m |  return (<div className="bg-gray-800/50 backdrop-blur rounded-xl border border-gray-700 shadow-xl shadow-blue-900/10 overflow-hidden">
+    : [31;1m          ^^^[0m
+ [2m96[0m |  <div className="p-4 bg-gray-800/80 border-b border-gray-700">
+ [2m97[0m |  <div className="flex items-center justify-between">
+ [2m98[0m |  <h3 className="text-lg font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">数据预览</h3>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/DataTable.tsx
+./components/ImportPanel.tsx
+./app/page.tsx
+ ⨯ ./components/DataTable.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4mD:\ztoccbill\components\DataTable.tsx[0m:92:1]
+ [2m92[0m |  const hasUnmappedRequiredFields = requiredFields.some(rf => {
+ [2m93[0m |  return rows.some(row => !row.data[rf.field]);
+ [2m94[0m |  });
+ [2m95[0m |  return (<div className="bg-gray-800/50 backdrop-blur rounded-xl border border-gray-700 shadow-xl shadow-blue-900/10 overflow-hidden">
+    : [31;1m          ^^^[0m
+ [2m96[0m |  <div className="p-4 bg-gray-800/80 border-b border-gray-700">
+ [2m97[0m |  <div className="flex items-center justify-between">
+ [2m98[0m |  <h3 className="text-lg font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">数据预览</h3>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/DataTable.tsx
+./components/ImportPanel.tsx
+./app/page.tsx
+ ⨯ ./components/DataTable.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4mD:\ztoccbill\components\DataTable.tsx[0m:92:1]
+ [2m92[0m |  const hasUnmappedRequiredFields = requiredFields.some(rf => {
+ [2m93[0m |  return rows.some(row => !row.data[rf.field]);
+ [2m94[0m |  });
+ [2m95[0m |  return (<div className="bg-gray-800/50 backdrop-blur rounded-xl border border-gray-700 shadow-xl shadow-blue-900/10 overflow-hidden">
+    : [31;1m          ^^^[0m
+ [2m96[0m |  <div className="p-4 bg-gray-800/80 border-b border-gray-700">
+ [2m97[0m |  <div className="flex items-center justify-between">
+ [2m98[0m |  <h3 className="text-lg font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">数据预览</h3>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/DataTable.tsx
+./components/ImportPanel.tsx
+./app/page.tsx
+ ⨯ ./components/DataTable.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4mD:\ztoccbill\components\DataTable.tsx[0m:92:1]
+ [2m92[0m |  const hasUnmappedRequiredFields = requiredFields.some(rf => {
+ [2m93[0m |  return rows.some(row => !row.data[rf.field]);
+ [2m94[0m |  });
+ [2m95[0m |  return (<div className="bg-gray-800/50 backdrop-blur rounded-xl border border-gray-700 shadow-xl shadow-blue-900/10 overflow-hidden">
+    : [31;1m          ^^^[0m
+ [2m96[0m |  <div className="p-4 bg-gray-800/80 border-b border-gray-700">
+ [2m97[0m |  <div className="flex items-center justify-between">
+ [2m98[0m |  <h3 className="text-lg font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">数据预览</h3>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/DataTable.tsx
+./components/ImportPanel.tsx
+./app/page.tsx
+ ⨯ ./components/DataTable.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4mD:\ztoccbill\components\DataTable.tsx[0m:92:1]
+ [2m92[0m |  const hasUnmappedRequiredFields = requiredFields.some(rf => {
+ [2m93[0m |  return rows.some(row => !row.data[rf.field]);
+ [2m94[0m |  });
+ [2m95[0m |  return (<div className="bg-gray-800/50 backdrop-blur rounded-xl border border-gray-700 shadow-xl shadow-blue-900/10 overflow-hidden">
+    : [31;1m          ^^^[0m
+ [2m96[0m |  <div className="p-4 bg-gray-800/80 border-b border-gray-700">
+ [2m97[0m |  <div className="flex items-center justify-between">
+ [2m98[0m |  <h3 className="text-lg font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">数据预览</h3>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/DataTable.tsx
+./components/ImportPanel.tsx
+./app/page.tsx
+ ⨯ ./components/DataTable.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4mD:\ztoccbill\components\DataTable.tsx[0m:92:1]
+ [2m92[0m |  const hasUnmappedRequiredFields = requiredFields.some(rf => {
+ [2m93[0m |  return rows.some(row => !row.data[rf.field]);
+ [2m94[0m |  });
+ [2m95[0m |  return (<div className="bg-gray-800/50 backdrop-blur rounded-xl border border-gray-700 shadow-xl shadow-blue-900/10 overflow-hidden">
+    : [31;1m          ^^^[0m
+ [2m96[0m |  <div className="p-4 bg-gray-800/80 border-b border-gray-700">
+ [2m97[0m |  <div className="flex items-center justify-between">
+ [2m98[0m |  <h3 className="text-lg font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">数据预览</h3>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/DataTable.tsx
+./components/ImportPanel.tsx
+./app/page.tsx
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'D:\ztoccbill\.next\server'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/page' in D:\ztoccbill\node_modules\next\dist\server for build dependencies doesn't lead to expected result 'D:\ztoccbill\.next\server\app\page.js', but to 'Error: Can't resolve '../../../../.next/server/app/page' in 'D:\ztoccbill\node_modules\next\dist\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/page (expected D:\ztoccbill\.next\server\app\page.js)
+<w>  at file dependencies D:\ztoccbill\node_modules\next\dist\server\require.js
+<w>  at file D:\ztoccbill\node_modules\next\dist\server\require.js
+<w>  at file dependencies D:\ztoccbill\node_modules\next\dist\server\load-components.js
+<w>  at file D:\ztoccbill\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies D:\ztoccbill\node_modules\next\dist\build\utils.js
+<w>  at file D:\ztoccbill\node_modules\next\dist\build\utils.js
+<w>  at file dependencies D:\ztoccbill\node_modules\next\dist\build\worker.js
+<w>  at file D:\ztoccbill\node_modules\next\dist\build\worker.js
+<w>  at file dependencies D:\ztoccbill\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file D:\ztoccbill\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file dependencies D:\ztoccbill\node_modules\next\dist\compiled\loader-runner\LoaderRunner.js
+<w>  at file D:\ztoccbill\node_modules\next\dist\compiled\loader-runner\LoaderRunner.js
+<w>  at file dependencies D:\ztoccbill\node_modules\next\dist\compiled\webpack\bundle5.js
+<w>  at file D:\ztoccbill\node_modules\next\dist\compiled\webpack\bundle5.js
+<w>  at file dependencies D:\ztoccbill\node_modules\next\dist\compiled\webpack\webpack.js
+<w>  at file D:\ztoccbill\node_modules\next\dist\compiled\webpack\webpack.js
+<w>  at file dependencies D:\ztoccbill\node_modules\next\dist\build\webpack\plugins\define-env-plugin.js
+<w>  at file D:\ztoccbill\node_modules\next\dist\build\webpack\plugins\define-env-plugin.js
+<w>  at file dependencies D:\ztoccbill\node_modules\next\dist\build\swc\index.js
+<w>  at file D:\ztoccbill\node_modules\next\dist\build\swc\index.js
+<w>  at file dependencies D:\ztoccbill\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at file D:\ztoccbill\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w>  at resolve commonjs D:\ztoccbill\node_modules\next\dist\build\webpack\loaders\next-swc-loader.js
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'D:\ztoccbill\.next\server\app'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving '../../../../.next/server/app/page' in D:\ztoccbill\node_modules\next\dist\server for build dependencies doesn't lead to expected result 'D:\ztoccbill\.next\server\app\page.js', but to 'Error: Can't resolve '../../../../.next/server/app/page' in 'D:\ztoccbill\node_modules\next\dist\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ../../../../.next/server/app/page (expected D:\ztoccbill\.next\server\app\page.js)
+<w>  at file dependencies D:\ztoccbill\node_modules\next\dist\server\require.js
+<w>  at file D:\ztoccbill\node_modules\next\dist\server\require.js
+<w>  at file dependencies D:\ztoccbill\node_modules\next\dist\server\load-components.js
+<w>  at file D:\ztoccbill\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies D:\ztoccbill\node_modules\next\dist\build\utils.js
+<w>  at file D:\ztoccbill\node_modules\next\dist\build\utils.js
+<w>  at file dependencies D:\ztoccbill\node_modules\next\dist\build\worker.js
+<w>  at file D:\ztoccbill\node_modules\next\dist\build\worker.js
+<w>  at file dependencies D:\ztoccbill\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file D:\ztoccbill\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs D:\ztoccbill\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+ ⨯ ./components/DataTable.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4mD:\ztoccbill\components\DataTable.tsx[0m:99:1]
+ [2m 99[0m |   });
+ [2m100[0m | 
+ [2m101[0m |   return (
+ [2m102[0m |     <div className="bg-gray-800/50 backdrop-blur rounded-xl border border-gray-700 shadow-xl shadow-blue-900/10 overflow-hidden">
+     : [31;1m     ^^^[0m
+ [2m103[0m |       <div className="p-4 bg-gray-800/80 border-b border-gray-700">
+ [2m104[0m |         <div className="flex items-center justify-between">
+ [2m105[0m |           <h3 className="text-lg font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">数据预览</h3>
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/DataTable.tsx
+./components/ImportPanel.tsx
+./app/page.tsx
+ ⨯ ./components/DataTable.tsx
+Error: Failed to read source code from D:\ztoccbill\components\DataTable.tsx
+
+Caused by:
+    系统找不到指定的文件。 (os error 2)
+
+Import trace for requested module:
+./components/DataTable.tsx
+./components/ImportPanel.tsx
+./app/page.tsx
+ ⨯ ./components/DataTable.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4mD:\ztoccbill\components\DataTable.tsx[0m:85:1]
+ [2m85[0m |   const requiredFields = SYSTEM_FIELDS.filter(f => f.required);
+ [2m86[0m |   const hasUnmappedRequiredFields = requiredFields.some(rf => rows.some(row => !row.data[rf.field]));
+ [2m87[0m | 
+ [2m88[0m |   return (<div className="bg-gray-800/50 backdrop-blur rounded-xl border border-gray-700 shadow-xl shadow-blue-900/10 overflow-hidden">
+    : [31;1m           ^^^[0m
+ [2m89[0m |     <div className="p-4 bg-gray-800/80 border-b border-gray-700">
+ [2m90[0m |       <div className="flex items-center justify-between">
+ [2m91[0m |         <h3 className="text-lg font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">数据预览</h3>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/DataTable.tsx
+./components/ImportPanel.tsx
+./app/page.tsx
+ ⨯ ./components/DataTable.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+    ,-[[36;1;4mD:\ztoccbill\components\DataTable.tsx[0m:86:1]
+ [2m86[0m |   const hasUnmappedRequiredFields = requiredFields.some(rf => rows.some(row => !row.data[rf.field]));
+ [2m87[0m | 
+ [2m88[0m |   return (
+ [2m89[0m |     <div className="bg-gray-800/50 backdrop-blur rounded-xl border border-gray-700 shadow-xl shadow-blue-900/10 overflow-hidden">
+    : [31;1m     ^^^[0m
+ [2m90[0m |       <div className="p-4 bg-gray-800/80 border-b border-gray-700">
+ [2m91[0m |         <div className="flex items-center justify-between">
+ [2m92[0m |           <h3 className="text-lg font-semibold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">数据预览</h3>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./components/DataTable.tsx
+./components/ImportPanel.tsx
+./app/page.tsx
+Error: Cannot find module 'D:\ztoccbill\.next\server\pages\_document.js'
+Require stack:
+- D:\ztoccbill\node_modules\next\dist\server\require.js
+- D:\ztoccbill\node_modules\next\dist\server\load-components.js
+- D:\ztoccbill\node_modules\next\dist\build\utils.js
+- D:\ztoccbill\node_modules\next\dist\server\dev\hot-middleware.js
+- D:\ztoccbill\node_modules\next\dist\server\dev\hot-reloader-webpack.js
+- D:\ztoccbill\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- D:\ztoccbill\node_modules\next\dist\server\lib\router-server.js
+- D:\ztoccbill\node_modules\next\dist\server\lib\start-server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1075:15)
+    at D:\ztoccbill\node_modules\next\dist\server\require-hook.js:54:36
+    at Module._load (node:internal/modules/cjs/loader:920:27)
+    at Module.require (node:internal/modules/cjs/loader:1141:19)
+    at mod.require (D:\ztoccbill\node_modules\next\dist\server\require-hook.js:64:28)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at requirePage (D:\ztoccbill\node_modules\next\dist\server\require.js:109:84)
+    at D:\ztoccbill\node_modules\next\dist\server\load-components.js:55:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\load-components.js:54:33)
+    at async DevServer.findPageComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\next-server.js:439:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\require.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\load-components.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\build\\utils.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\dev\\hot-middleware.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\dev\\hot-reloader-webpack.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ]
+}
+Error: Cannot find module 'D:\ztoccbill\.next\server\pages\_document.js'
+Require stack:
+- D:\ztoccbill\node_modules\next\dist\server\require.js
+- D:\ztoccbill\node_modules\next\dist\server\load-components.js
+- D:\ztoccbill\node_modules\next\dist\build\utils.js
+- D:\ztoccbill\node_modules\next\dist\server\dev\hot-middleware.js
+- D:\ztoccbill\node_modules\next\dist\server\dev\hot-reloader-webpack.js
+- D:\ztoccbill\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- D:\ztoccbill\node_modules\next\dist\server\lib\router-server.js
+- D:\ztoccbill\node_modules\next\dist\server\lib\start-server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1075:15)
+    at D:\ztoccbill\node_modules\next\dist\server\require-hook.js:54:36
+    at Module._load (node:internal/modules/cjs/loader:920:27)
+    at Module.require (node:internal/modules/cjs/loader:1141:19)
+    at mod.require (D:\ztoccbill\node_modules\next\dist\server\require-hook.js:64:28)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at requirePage (D:\ztoccbill\node_modules\next\dist\server\require.js:109:84)
+    at D:\ztoccbill\node_modules\next\dist\server\load-components.js:55:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\load-components.js:54:33)
+    at async DevServer.findPageComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\next-server.js:439:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\require.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\load-components.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\build\\utils.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\dev\\hot-middleware.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\dev\\hot-reloader-webpack.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ]
+}
+Error: Cannot find module 'D:\ztoccbill\.next\server\pages\_document.js'
+Require stack:
+- D:\ztoccbill\node_modules\next\dist\server\require.js
+- D:\ztoccbill\node_modules\next\dist\server\load-components.js
+- D:\ztoccbill\node_modules\next\dist\build\utils.js
+- D:\ztoccbill\node_modules\next\dist\server\dev\hot-middleware.js
+- D:\ztoccbill\node_modules\next\dist\server\dev\hot-reloader-webpack.js
+- D:\ztoccbill\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- D:\ztoccbill\node_modules\next\dist\server\lib\router-server.js
+- D:\ztoccbill\node_modules\next\dist\server\lib\start-server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1075:15)
+    at D:\ztoccbill\node_modules\next\dist\server\require-hook.js:54:36
+    at Module._load (node:internal/modules/cjs/loader:920:27)
+    at Module.require (node:internal/modules/cjs/loader:1141:19)
+    at mod.require (D:\ztoccbill\node_modules\next\dist\server\require-hook.js:64:28)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at requirePage (D:\ztoccbill\node_modules\next\dist\server\require.js:109:84)
+    at D:\ztoccbill\node_modules\next\dist\server\load-components.js:55:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\load-components.js:54:33)
+    at async DevServer.findPageComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\next-server.js:439:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\require.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\load-components.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\build\\utils.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\dev\\hot-middleware.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\dev\\hot-reloader-webpack.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ]
+}
+Error: Cannot find module 'D:\ztoccbill\.next\server\pages\_document.js'
+Require stack:
+- D:\ztoccbill\node_modules\next\dist\server\require.js
+- D:\ztoccbill\node_modules\next\dist\server\load-components.js
+- D:\ztoccbill\node_modules\next\dist\build\utils.js
+- D:\ztoccbill\node_modules\next\dist\server\dev\hot-middleware.js
+- D:\ztoccbill\node_modules\next\dist\server\dev\hot-reloader-webpack.js
+- D:\ztoccbill\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- D:\ztoccbill\node_modules\next\dist\server\lib\router-server.js
+- D:\ztoccbill\node_modules\next\dist\server\lib\start-server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1075:15)
+    at D:\ztoccbill\node_modules\next\dist\server\require-hook.js:54:36
+    at Module._load (node:internal/modules/cjs/loader:920:27)
+    at Module.require (node:internal/modules/cjs/loader:1141:19)
+    at mod.require (D:\ztoccbill\node_modules\next\dist\server\require-hook.js:64:28)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at requirePage (D:\ztoccbill\node_modules\next\dist\server\require.js:109:84)
+    at D:\ztoccbill\node_modules\next\dist\server\load-components.js:55:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\load-components.js:54:33)
+    at async DevServer.findPageComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\next-server.js:439:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\require.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\load-components.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\build\\utils.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\dev\\hot-middleware.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\dev\\hot-reloader-webpack.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ]
+}
+Error: Cannot find module 'D:\ztoccbill\.next\server\pages\_document.js'
+Require stack:
+- D:\ztoccbill\node_modules\next\dist\server\require.js
+- D:\ztoccbill\node_modules\next\dist\server\load-components.js
+- D:\ztoccbill\node_modules\next\dist\build\utils.js
+- D:\ztoccbill\node_modules\next\dist\server\dev\hot-middleware.js
+- D:\ztoccbill\node_modules\next\dist\server\dev\hot-reloader-webpack.js
+- D:\ztoccbill\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- D:\ztoccbill\node_modules\next\dist\server\lib\router-server.js
+- D:\ztoccbill\node_modules\next\dist\server\lib\start-server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1075:15)
+    at D:\ztoccbill\node_modules\next\dist\server\require-hook.js:54:36
+    at Module._load (node:internal/modules/cjs/loader:920:27)
+    at Module.require (node:internal/modules/cjs/loader:1141:19)
+    at mod.require (D:\ztoccbill\node_modules\next\dist\server\require-hook.js:64:28)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at requirePage (D:\ztoccbill\node_modules\next\dist\server\require.js:109:84)
+    at D:\ztoccbill\node_modules\next\dist\server\load-components.js:55:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\load-components.js:54:33)
+    at async DevServer.findPageComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\next-server.js:439:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\require.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\load-components.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\build\\utils.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\dev\\hot-middleware.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\dev\\hot-reloader-webpack.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ]
+}
+Error: Cannot find module 'D:\ztoccbill\.next\server\pages\_document.js'
+Require stack:
+- D:\ztoccbill\node_modules\next\dist\server\require.js
+- D:\ztoccbill\node_modules\next\dist\server\load-components.js
+- D:\ztoccbill\node_modules\next\dist\build\utils.js
+- D:\ztoccbill\node_modules\next\dist\server\dev\hot-middleware.js
+- D:\ztoccbill\node_modules\next\dist\server\dev\hot-reloader-webpack.js
+- D:\ztoccbill\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- D:\ztoccbill\node_modules\next\dist\server\lib\router-server.js
+- D:\ztoccbill\node_modules\next\dist\server\lib\start-server.js
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1075:15)
+    at D:\ztoccbill\node_modules\next\dist\server\require-hook.js:54:36
+    at Module._load (node:internal/modules/cjs/loader:920:27)
+    at Module.require (node:internal/modules/cjs/loader:1141:19)
+    at mod.require (D:\ztoccbill\node_modules\next\dist\server\require-hook.js:64:28)
+    at require (node:internal/modules/cjs/helpers:110:18)
+    at requirePage (D:\ztoccbill\node_modules\next\dist\server\require.js:109:84)
+    at D:\ztoccbill\node_modules\next\dist\server\load-components.js:55:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\load-components.js:54:33)
+    at async DevServer.findPageComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\next-server.js:439:36) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\require.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\load-components.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\build\\utils.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\dev\\hot-middleware.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\dev\\hot-reloader-webpack.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'D:\\ztoccbill\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ]
+}
+ ⨯ Error: Invariant: missing bootstrap script. This is a bug in Next.js
+    at tI (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:7531)
+    at D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:27790
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:62
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:121:36
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NoopTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18086)
+    at ProxyTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18847)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:107
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NextTracerImpl.trace (D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:32)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:31
+    at tV (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:32896)
+    at async doRender (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1294:26)
+    at async cacheEntry.responseCache.get.incrementalCache.incrementalCache (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1446:28)
+    at async DevServer.renderToResponseWithComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1361:28) {
+  page: '/'
+}
+ ⨯ Error: Invariant: missing bootstrap script. This is a bug in Next.js
+    at tI (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:7531)
+    at D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:27790
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:62
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:121:36
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NoopTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18086)
+    at ProxyTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18847)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:107
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NextTracerImpl.trace (D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:32)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:31
+    at tV (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:32896)
+    at async doRender (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1294:26)
+    at async cacheEntry.responseCache.get.incrementalCache.incrementalCache (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1446:28)
+    at async DevServer.renderToResponseWithComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1361:28) {
+  page: '/'
+}
+ ⨯ Error: Invariant: missing bootstrap script. This is a bug in Next.js
+    at tI (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:7531)
+    at D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:27790
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:62
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:121:36
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NoopTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18086)
+    at ProxyTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18847)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:107
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NextTracerImpl.trace (D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:32)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:31
+    at tV (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:32896)
+    at async doRender (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1294:26)
+    at async cacheEntry.responseCache.get.incrementalCache.incrementalCache (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1446:28)
+    at async DevServer.renderToResponseWithComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1361:28) {
+  page: '/'
+}
+ ⨯ Error: Invariant: missing bootstrap script. This is a bug in Next.js
+    at tI (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:7531)
+    at D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:27790
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:62
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:121:36
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NoopTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18086)
+    at ProxyTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18847)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:107
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NextTracerImpl.trace (D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:32)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:31
+    at tV (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:32896)
+    at async doRender (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1294:26)
+    at async cacheEntry.responseCache.get.incrementalCache.incrementalCache (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1446:28)
+    at async DevServer.renderToResponseWithComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1361:28) {
+  page: '/'
+}
+ ⨯ Error: Invariant: missing bootstrap script. This is a bug in Next.js
+    at tI (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:7531)
+    at D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:27790
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:62
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:121:36
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NoopTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18086)
+    at ProxyTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18847)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:107
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NextTracerImpl.trace (D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:32)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:31
+    at tV (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:32896)
+    at async doRender (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1294:26)
+    at async cacheEntry.responseCache.get.incrementalCache.incrementalCache (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1446:28)
+    at async DevServer.renderToResponseWithComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1361:28) {
+  page: '/'
+}
+ ⨯ Error: Invariant: missing bootstrap script. This is a bug in Next.js
+    at tI (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:7531)
+    at D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:27790
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:62
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:121:36
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NoopTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18086)
+    at ProxyTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18847)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:107
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NextTracerImpl.trace (D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:32)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:31
+    at tV (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:32896)
+    at async doRender (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1294:26)
+    at async cacheEntry.responseCache.get.incrementalCache.incrementalCache (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1446:28)
+    at async DevServer.renderToResponseWithComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1361:28) {
+  page: '/'
+}
+ ⨯ Error: Invariant: missing bootstrap script. This is a bug in Next.js
+    at tI (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:7531)
+    at D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:27790
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:62
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:121:36
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NoopTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18086)
+    at ProxyTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18847)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:107
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NextTracerImpl.trace (D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:32)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:31
+    at tV (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:32896)
+    at async doRender (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1294:26)
+    at async cacheEntry.responseCache.get.incrementalCache.incrementalCache (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1446:28)
+    at async DevServer.renderToResponseWithComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1361:28) {
+  page: '/'
+}
+ ⨯ Error: Invariant: missing bootstrap script. This is a bug in Next.js
+    at tI (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:7531)
+    at D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:27790
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:62
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:121:36
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NoopTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18086)
+    at ProxyTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18847)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:107
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NextTracerImpl.trace (D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:32)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:31
+    at tV (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:32896)
+    at async doRender (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1294:26)
+    at async cacheEntry.responseCache.get.incrementalCache.incrementalCache (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1446:28)
+    at async DevServer.renderToResponseWithComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1361:28) {
+  page: '/'
+}
+ ⨯ Error: Invariant: missing bootstrap script. This is a bug in Next.js
+    at tI (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:7531)
+    at D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:27790
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:62
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:121:36
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NoopTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18086)
+    at ProxyTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18847)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:107
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NextTracerImpl.trace (D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:32)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:31
+    at tV (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:32896)
+    at async doRender (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1294:26)
+    at async cacheEntry.responseCache.get.incrementalCache.incrementalCache (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1446:28)
+    at async DevServer.renderToResponseWithComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1361:28) {
+  page: '/'
+}
+ ⨯ Error: Invariant: missing bootstrap script. This is a bug in Next.js
+    at tI (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:7531)
+    at D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:27790
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:62
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:121:36
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NoopTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18086)
+    at ProxyTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18847)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:107
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NextTracerImpl.trace (D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:32)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:31
+    at tV (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:32896)
+    at async doRender (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1294:26)
+    at async cacheEntry.responseCache.get.incrementalCache.incrementalCache (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1446:28)
+    at async DevServer.renderToResponseWithComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1361:28) {
+  page: '/'
+}
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, stat 'D:\ztoccbill\.next\cache\webpack\client-development\4.pack.gz'
+ ⨯ Error: Invariant: missing bootstrap script. This is a bug in Next.js
+    at tI (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:7531)
+    at D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:27790
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:62
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:121:36
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NoopTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18086)
+    at ProxyTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18847)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:107
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NextTracerImpl.trace (D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:32)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:31
+    at tV (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:32896)
+    at async doRender (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1294:26)
+    at async cacheEntry.responseCache.get.incrementalCache.incrementalCache (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1446:28)
+    at async DevServer.renderToResponseWithComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1361:28) {
+  page: '/'
+}
+ ⨯ Error: Invariant: missing bootstrap script. This is a bug in Next.js
+    at tI (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:7531)
+    at D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:27790
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:62
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:121:36
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NoopTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18086)
+    at ProxyTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18847)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:107
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NextTracerImpl.trace (D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:32)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:31
+    at tV (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:32896)
+    at async doRender (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1294:26)
+    at async cacheEntry.responseCache.get.incrementalCache.incrementalCache (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1446:28)
+    at async DevServer.renderToResponseWithComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1361:28) {
+  page: '/'
+}
+ ⨯ Error: Invariant: missing bootstrap script. This is a bug in Next.js
+    at tI (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:7531)
+    at D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:27790
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:62
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:121:36
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NoopTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18086)
+    at ProxyTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18847)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:107
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NextTracerImpl.trace (D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:32)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:31
+    at tV (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:32896)
+    at async doRender (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1294:26)
+    at async cacheEntry.responseCache.get.incrementalCache.incrementalCache (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1446:28)
+    at async DevServer.renderToResponseWithComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1361:28) {
+  page: '/'
+}
+ ⨯ Error: Invariant: missing bootstrap script. This is a bug in Next.js
+    at tI (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:7531)
+    at D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:27790
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:62
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:121:36
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NoopTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18086)
+    at ProxyTracer.startActiveSpan (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:18847)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:107
+    at NoopContextManager.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:7057)
+    at ContextAPI.with (D:\ztoccbill\node_modules\next\dist\compiled\@opentelemetry\api\index.js:1:516)
+    at NextTracerImpl.trace (D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:110:32)
+    at D:\ztoccbill\node_modules\next\dist\server\lib\trace\tracer.js:163:31
+    at tV (D:\ztoccbill\node_modules\next\dist\compiled\next-server\app-page.runtime.dev.js:13:32896)
+    at async doRender (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1294:26)
+    at async cacheEntry.responseCache.get.incrementalCache.incrementalCache (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1446:28)
+    at async DevServer.renderToResponseWithComponentsImpl (D:\ztoccbill\node_modules\next\dist\server\base-server.js:1361:28) {
+  page: '/'
+}
