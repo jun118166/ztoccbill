@@ -244,6 +244,15 @@ export function ImportPanel() {
           </h3>
           <p className="text-sm text-gray-500">支持 .xls 和 .xlsx 格式</p>
 
+          <a
+            href="/api/download-template"
+            download="template1-standard.xlsx"
+            className="inline-flex items-center gap-1 px-4 py-2 mt-4 text-sm bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-all"
+          >
+            <Download className="w-4 h-4" />
+            下载标准模板
+          </a>
+
           {file && (
             <button
               onClick={(e) => {
