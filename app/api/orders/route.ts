@@ -10,7 +10,14 @@ export async function GET(request: Request) {
     const page = parseInt(url.searchParams.get('page') || '1')
     const limit = parseInt(url.searchParams.get('limit') || '20')
     
-    const { orders, total } = await getOrders(page, limit)
+    const filters = {
+      externalOrderNo: url.searchParams.get('externalOrderNo') || undefined,
+      receiverName: url.searchParams.get('receiverName') || undefined,
+      startDate: url.searchParams.get('startDate') || undefined,
+      endDate: url.searchParams.get('endDate') || undefined
+    }
+    
+    const { orders, total } = await getOrders(page, limit, filters)
     
     return NextResponse.json({ orders, total })
   } catch (error) {

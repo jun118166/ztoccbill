@@ -66,18 +66,113 @@ export async function createOrder(row: ParsedRow): Promise<Order> {
   return result[0] as Order
 }
 
-export async function getOrders(page: number = 1, limit: number = 20): Promise<{ orders: Order[]; total: number }> {
+export async function getOrders(
+  page: number = 1, 
+  limit: number = 20,
+  filters: {
+    externalOrderNo?: string
+    receiverName?: string
+    startDate?: string
+    endDate?: string
+  } = {}
+): Promise<{ orders: Order[]; total: number }> {
   const offset = (page - 1) * limit
   
-  const orders = await sql`
-    SELECT * FROM orders
-    ORDER BY created_at DESC
-    LIMIT ${limit} OFFSET ${offset}
-  `
+  if (!filters.externalOrderNo && !filters.receiverName && !filters.startDate && !filters.endDate) {
+    const orders = await sql`
+      SELECT * FROM orders
+      ORDER BY created_at DESC
+      LIMIT ${limit} OFFSET ${offset}
+    `
+    
+    const totalResult = await sql`SELECT COUNT(*) FROM orders`
+    
+    return {
+      orders: orders as Order[],
+      total: Number(totalResult[0].count)
+    }
+  }
   
-  const totalResult = await sql`
-    SELECT COUNT(*) FROM orders
-  `
+  let orders, totalResult
+  
+  if (filters.externalOrderNo && !filters.receiverName && !filters.startDate && !filters.endDate) {
+    orders = await sql`
+      SELECT * FROM orders
+      WHERE external_order_no ILIKE ${'%' + filters.externalOrderNo + '%'}
+      ORDER BY created_at DESC
+      LIMIT ${limit} OFFSET ${offset}
+    `
+    totalResult = await sql`SELECT COUNT(*) FROM orders WHERE external_order_no ILIKE ${'%' + filters.externalOrderNo + '%'}`
+  } else if (!filters.externalOrderNo && filters.receiverName && !filters.startDate && !filters.endDate) {
+    orders = await sql`
+      SELECT * FROM orders
+      WHERE receiver_name ILIKE ${'%' + filters.receiverName + '%'}
+      ORDER BY created_at DESC
+      LIMIT ${limit} OFFSET ${offset}
+    `
+    totalResult = await sql`SELECT COUNT(*) FROM orders WHERE receiver_name ILIKE ${'%' + filters.receiverName + '%'}`
+  } else if (!filters.externalOrderNo && !filters.receiverName && filters.startDate && !filters.endDate) {
+    const startDate = new Date(filters.startDate).toISOString()
+    orders = await sql`
+      SELECT * FROM orders
+      WHERE created_at >= ${startDate}
+      ORDER BY created_at DESC
+      LIMIT ${limit} OFFSET ${offset}
+    `
+    totalResult = await sql`SELECT COUNT(*) FROM orders WHERE created_at >= ${startDate}`
+  } else if (!filters.externalOrderNo && !filters.receiverName && !filters.startDate && filters.endDate) {
+    const endDate = new Date(filters.endDate).toISOString()
+    orders = await sql`
+      SELECT * FROM orders
+      WHERE created_at <= ${endDate}
+      ORDER BY created_at DESC
+      LIMIT ${limit} OFFSET ${offset}
+    `
+    totalResult = await sql`SELECT COUNT(*) FROM orders WHERE created_at <= ${endDate}`
+  } else if (filters.externalOrderNo && filters.receiverName && !filters.startDate && !filters.endDate) {
+    orders = await sql`
+      SELECT * FROM orders
+      WHERE external_order_no ILIKE ${'%' + filters.externalOrderNo + '%'}
+        AND receiver_name ILIKE ${'%' + filters.receiverName + '%'}
+      ORDER BY created_at DESC
+      LIMIT ${limit} OFFSET ${offset}
+    `
+    totalResult = await sql`SELECT COUNT(*) FROM orders WHERE external_order_no ILIKE ${'%' + filters.externalOrderNo + '%'} AND receiver_name ILIKE ${'%' + filters.receiverName + '%'}`
+  } else if (!filters.externalOrderNo && !filters.receiverName && filters.startDate && filters.endDate) {
+    const startDate = new Date(filters.startDate).toISOString()
+    const endDate = new Date(filters.endDate).toISOString()
+    orders = await sql`
+      SELECT * FROM orders
+      WHERE created_at >= ${startDate} AND created_at <= ${endDate}
+      ORDER BY created_at DESC
+      LIMIT ${limit} OFFSET ${offset}
+    `
+    totalResult = await sql`SELECT COUNT(*) FROM orders WHERE created_at >= ${startDate} AND created_at <= ${endDate}`
+  } else {
+    const externalOrderNo = filters.externalOrderNo ? `%${filters.externalOrderNo}%` : ''
+    const receiverName = filters.receiverName ? `%${filters.receiverName}%` : ''
+    const startDate = filters.startDate ? new Date(filters.startDate).toISOString() : '1970-01-01T00:00:00.000Z'
+    const endDate = filters.endDate ? new Date(filters.endDate).toISOString() : '2100-01-01T00:00:00.000Z'
+    
+    orders = await sql`
+      SELECT * FROM orders
+      WHERE 
+        (${filters.externalOrderNo ? 1 : 0} = 0 OR external_order_no ILIKE ${externalOrderNo})
+        AND (${filters.receiverName ? 1 : 0} = 0 OR receiver_name ILIKE ${receiverName})
+        AND (${filters.startDate ? 1 : 0} = 0 OR created_at >= ${startDate})
+        AND (${filters.endDate ? 1 : 0} = 0 OR created_at <= ${endDate})
+      ORDER BY created_at DESC
+      LIMIT ${limit} OFFSET ${offset}
+    `
+    totalResult = await sql`
+      SELECT COUNT(*) FROM orders
+      WHERE 
+        (${filters.externalOrderNo ? 1 : 0} = 0 OR external_order_no ILIKE ${externalOrderNo})
+        AND (${filters.receiverName ? 1 : 0} = 0 OR receiver_name ILIKE ${receiverName})
+        AND (${filters.startDate ? 1 : 0} = 0 OR created_at >= ${startDate})
+        AND (${filters.endDate ? 1 : 0} = 0 OR created_at <= ${endDate})
+    `
+  }
   
   return {
     orders: orders as Order[],

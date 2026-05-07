@@ -11,6 +11,12 @@ export function OrderList() {
   const [total, setTotal] = useState(0)
   const [toasts, setToasts] = useState<ToastMessage[]>([])
   const [selectedOrder, setSelectedOrder] = useState<Order | null>(null)
+  const [filters, setFilters] = useState({
+    externalOrderNo: '',
+    receiverName: '',
+    startDate: '',
+    endDate: ''
+  })
 
   const addToast = (type: ToastMessage['type'], message: string) => {
     const id = Date.now().toString()
@@ -24,7 +30,15 @@ export function OrderList() {
   const fetchOrders = async (pageNum: number = 1) => {
     setLoading(true)
     try {
-      const response = await fetch(`/api/orders?page=${pageNum}&limit=20`)
+      const params = new URLSearchParams({
+        page: pageNum.toString(),
+        limit: '20',
+        ...(filters.externalOrderNo && { externalOrderNo: filters.externalOrderNo }),
+        ...(filters.receiverName && { receiverName: filters.receiverName }),
+        ...(filters.startDate && { startDate: filters.startDate }),
+        ...(filters.endDate && { endDate: filters.endDate })
+      })
+      const response = await fetch(`/api/orders?${params}`)
       const result = await response.json()
       setOrders(result.orders || [])
       setTotal(result.total || 0)
@@ -36,6 +50,26 @@ export function OrderList() {
     } finally {
       setLoading(false)
     }
+  }
+
+  const handleFilterChange = (key: keyof typeof filters, value: string) => {
+    setFilters(prev => ({ ...prev, [key]: value }))
+  }
+
+  const handleSearch = () => {
+    setPage(1)
+    fetchOrders(1)
+  }
+
+  const handleReset = () => {
+    setFilters({
+      externalOrderNo: '',
+      receiverName: '',
+      startDate: '',
+      endDate: ''
+    })
+    setPage(1)
+    fetchOrders(1)
   }
 
   useEffect(() => {
@@ -80,12 +114,67 @@ export function OrderList() {
       <Toast messages={toasts} onRemove={removeToast} />
 
       <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 mb-6">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-bold text-gray-900 flex items-center gap-2">
             <List className="w-6 h-6 text-blue-500" />
             已导入订单列表
           </h2>
           <span className="text-sm text-gray-500">共 {total} 条记录</span>
+        </div>
+
+        <div className="flex flex-wrap gap-4">
+          <div className="flex items-center gap-2">
+            <label className="text-sm text-gray-600">外部编码:</label>
+            <input
+              type="text"
+              value={filters.externalOrderNo}
+              onChange={(e) => handleFilterChange('externalOrderNo', e.target.value)}
+              className="px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              placeholder="输入外部编码"
+            />
+          </div>
+          <div className="flex items-center gap-2">
+            <label className="text-sm text-gray-600">收件人姓名:</label>
+            <input
+              type="text"
+              value={filters.receiverName}
+              onChange={(e) => handleFilterChange('receiverName', e.target.value)}
+              className="px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              placeholder="输入收件人姓名"
+            />
+          </div>
+          <div className="flex items-center gap-2">
+            <label className="text-sm text-gray-600">开始时间:</label>
+            <input
+              type="date"
+              value={filters.startDate}
+              onChange={(e) => handleFilterChange('startDate', e.target.value)}
+              className="px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            />
+          </div>
+          <div className="flex items-center gap-2">
+            <label className="text-sm text-gray-600">结束时间:</label>
+            <input
+              type="date"
+              value={filters.endDate}
+              onChange={(e) => handleFilterChange('endDate', e.target.value)}
+              className="px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            />
+          </div>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={handleSearch}
+              className="px-4 py-2 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition-all"
+            >
+              搜索
+            </button>
+            <button
+              onClick={handleReset}
+              className="px-4 py-2 text-sm bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-all"
+            >
+              重置
+            </button>
+          </div>
         </div>
       </div>
 

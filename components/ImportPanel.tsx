@@ -175,18 +175,9 @@ export function ImportPanel() {
       <Toast messages={toasts} onRemove={removeToast} />
 
       <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 mb-6">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold text-gray-900">
-            Excel订单导入
-          </h2>
-          <button
-            onClick={resetState}
-            className="flex items-center gap-1 px-3 py-1.5 text-sm bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-all"
-          >
-            <RefreshCw className="w-4 h-4" />
-            重新开始
-          </button>
-        </div>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">
+          Excel订单导入
+        </h2>
 
         <div className="flex gap-2 mb-4">
           <button
@@ -247,6 +238,7 @@ export function ImportPanel() {
           <a
             href="/api/download-template"
             download="template1-standard.xlsx"
+            onClick={(e) => e.stopPropagation()}
             className="inline-flex items-center gap-1 px-4 py-2 mt-4 text-sm bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-all"
           >
             <Download className="w-4 h-4" />
