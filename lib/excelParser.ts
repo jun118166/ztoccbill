@@ -33,18 +33,18 @@ export function parseExcel(file: File): Promise<{ headers: string[]; rows: Excel
           return
         }
         
-        const headerRow = rawData[0]
-        const headers = headerRow.map((h: unknown, index: number) => {
+        const headerRow = rawData[0] as unknown[]
+        const headers = headerRow.map((h, index: number) => {
           const header = String(h ?? `列${index + 1}`).trim()
           return header || `列${index + 1}`
         })
         
-        const dataRows = rawData.slice(1)
+        const dataRows = rawData.slice(1) as unknown[][]
         const rows: ExcelRow[] = dataRows.map(row => {
           const rowObj: ExcelRow = {}
           row.forEach((value, index) => {
             const header = headers[index]
-            rowObj[header] = value
+            rowObj[header] = value as string | number | boolean | undefined
           })
           return rowObj
         })
