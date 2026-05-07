@@ -8,6 +8,7 @@ export function OrderList() {
   const [orders, setOrders] = useState<Order[]>([])
   const [loading, setLoading] = useState(true)
   const [page, setPage] = useState(1)
+  const [pageSize, setPageSize] = useState(10)
   const [total, setTotal] = useState(0)
   const [toasts, setToasts] = useState<ToastMessage[]>([])
   const [selectedOrder, setSelectedOrder] = useState<Order | null>(null)
@@ -32,7 +33,7 @@ export function OrderList() {
     try {
       const params = new URLSearchParams({
         page: pageNum.toString(),
-        limit: '20',
+        limit: pageSize.toString(),
         ...(filters.externalOrderNo && { externalOrderNo: filters.externalOrderNo }),
         ...(filters.receiverName && { receiverName: filters.receiverName }),
         ...(filters.startDate && { startDate: filters.startDate }),
@@ -69,6 +70,13 @@ export function OrderList() {
       endDate: ''
     })
     setPage(1)
+    setPageSize(10)
+    fetchOrders(1)
+  }
+
+  const handlePageSizeChange = (value: number) => {
+    setPageSize(value)
+    setPage(1)
     fetchOrders(1)
   }
 
@@ -99,7 +107,7 @@ export function OrderList() {
   }
 
   const handleNextPage = () => {
-    if (page * 20 < total) {
+    if (page * pageSize < total) {
       fetchOrders(page + 1)
     }
   }
@@ -255,24 +263,49 @@ export function OrderList() {
           </div>
 
           <div className="px-4 py-3 bg-gray-50 border-t border-gray-200 flex items-center justify-between">
-            <span className="text-sm text-gray-500">
-              第 {page} 页，共 {Math.ceil(total / 20)} 页
-            </span>
-            <div className="flex items-center gap-2">
-              <button
-                onClick={handlePrevPage}
-                disabled={page === 1}
-                className="p-1.5 rounded-lg hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed text-gray-600 hover:text-gray-900"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-              <button
-                onClick={handleNextPage}
-                disabled={page * 20 >= total}
-                className="p-1.5 rounded-lg hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed text-gray-600 hover:text-gray-900"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </button>
+            <div className="flex items-center gap-4">
+              <span className="text-sm text-gray-500">
+                第 {page} 页，共 {Math.ceil(total / pageSize)} 页
+              </span>
+              <span className="text-sm text-gray-500">
+                共 {total} 条记录
+              </span>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-gray-500">每页:</span>
+                <select
+                  value={pageSize}
+                  onChange={(e) => handlePageSizeChange(Number(e.target.value))}
+                  className="px-2 py-1 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  <option value={10}>10</option>
+                  <option value={20}>20</option>
+                  <option value={50}>50</option>
+                  <option value={100}>100</option>
+                </select>
+              </div>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={handlePrevPage}
+                  disabled={page === 1}
+                  className="p-1.5 rounded-lg hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed text-gray-600 hover:text-gray-900"
+                  title="上一页"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+                <span className="text-sm text-gray-600 min-w-[60px] text-center">
+                  {page} / {Math.ceil(total / pageSize)}
+                </span>
+                <button
+                  onClick={handleNextPage}
+                  disabled={page * pageSize >= total}
+                  className="p-1.5 rounded-lg hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed text-gray-600 hover:text-gray-900"
+                  title="下一页"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+              </div>
             </div>
           </div>
         </div>

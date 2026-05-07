@@ -77,7 +77,7 @@ export function ImportPanel() {
 
     setIsParsing(true)
     try {
-      const { headers: parsedHeaders, rows } = await parseExcel(file)
+      const { headers: parsedHeaders, rows, sheetName } = await parseExcel(file)
 
       if (rows.length === 0) {
         addToast('error', 'Excel 文件为空')
@@ -235,16 +235,6 @@ export function ImportPanel() {
           </h3>
           <p className="text-sm text-gray-500">支持 .xls 和 .xlsx 格式</p>
 
-          <a
-            href="/api/download-template"
-            download="template1-standard.xlsx"
-            onClick={(e) => e.stopPropagation()}
-            className="inline-flex items-center gap-1 px-4 py-2 mt-4 text-sm bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-all"
-          >
-            <Download className="w-4 h-4" />
-            下载标准模板
-          </a>
-
           {file && (
             <button
               onClick={(e) => {
@@ -272,7 +262,16 @@ export function ImportPanel() {
 
       {step === 'mapping' && (
         <div className="space-y-6">
-          <FieldMapping headers={headers} mappings={mappings} />
+          <FieldMapping 
+            headers={headers} 
+            mappings={mappings} 
+            onMappingsChange={(newMappings) => {
+              setMappings(newMappings)
+              // 重新应用映射到数据行
+              const remappedRows = applyMappings(rawRows, newMappings)
+              setParsedRows(remappedRows)
+            }} 
+          />
           <div className="flex justify-end gap-3">
             <button
               onClick={() => setStep('upload')}

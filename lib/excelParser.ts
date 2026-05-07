@@ -48,7 +48,40 @@ function findHeaderRow(rawData: unknown[][]): number {
   return bestRowIndex
 }
 
-export function parseExcel(file: File): Promise<{ headers: string[]; rows: ExcelRow[] }> {
+function analyzeSheet(sheet: XLSX.WorkSheet): { headerRowIndex: number; matchCount: number; rawData: unknown[][] } {
+  const rawData = XLSX.utils.sheet_to_json(sheet, { header: 1 }) as unknown[][]
+  
+  if (!rawData || rawData.length === 0) {
+    return { headerRowIndex: -1, matchCount: 0, rawData }
+  }
+  
+  const headerRowIndex = findHeaderRow(rawData)
+  const headerRow = rawData[headerRowIndex]
+  
+  if (!headerRow) {
+    return { headerRowIndex: -1, matchCount: 0, rawData }
+  }
+  
+  const allAliases = Object.values(FIELD_ALIASES).flat()
+  let matchCount = 0
+  
+  for (const cell of headerRow) {
+    const cellStr = String(cell ?? '').toLowerCase().trim().replace(/\s+/g, '')
+    if (cellStr) {
+      for (const alias of allAliases) {
+        const aliasClean = alias.toLowerCase().trim().replace(/\s+/g, '')
+        if (cellStr.includes(aliasClean) || aliasClean.includes(cellStr)) {
+          matchCount++
+          break
+        }
+      }
+    }
+  }
+  
+  return { headerRowIndex, matchCount, rawData }
+}
+
+export function parseExcel(file: File): Promise<{ headers: string[]; rows: ExcelRow[]; sheetName: string }> {
   return new Promise((resolve, reject) => {
     const reader = new FileReader()
     
@@ -56,24 +89,43 @@ export function parseExcel(file: File): Promise<{ headers: string[]; rows: Excel
       try {
         const data = e.target?.result as ArrayBuffer
         const workbook = XLSX.read(data, { type: 'array' })
-        const sheetName = workbook.SheetNames[0]
-        const worksheet = workbook.Sheets[sheetName]
         
-        const rawData = XLSX.utils.sheet_to_json(worksheet, { header: 1 }) as unknown[][]
+        if (workbook.SheetNames.length === 0) {
+          reject(new Error('Excel文件没有工作表'))
+          return
+        }
         
-        if (!rawData || rawData.length === 0) {
+        let bestSheetIndex = 0
+        let bestMatchCount = -1
+        let bestHeaderRowIndex = 0
+        let bestRawData: unknown[][] = []
+        
+        for (let i = 0; i < workbook.SheetNames.length; i++) {
+          const sheet = workbook.Sheets[workbook.SheetNames[i]]
+          const { headerRowIndex, matchCount, rawData } = analyzeSheet(sheet)
+          
+          if (matchCount > bestMatchCount) {
+            bestMatchCount = matchCount
+            bestSheetIndex = i
+            bestHeaderRowIndex = headerRowIndex
+            bestRawData = rawData
+          }
+        }
+        
+        const selectedSheetName = workbook.SheetNames[bestSheetIndex]
+        
+        if (!bestRawData || bestRawData.length === 0) {
           reject(new Error('Excel文件为空或没有数据'))
           return
         }
         
-        const headerRowIndex = findHeaderRow(rawData)
-        const headerRow = rawData[headerRowIndex]
+        const headerRow = bestRawData[bestHeaderRowIndex]
         const headers = headerRow.map((h: unknown, index: number) => {
           const header = String(h ?? `列${index + 1}`).trim()
           return header || `列${index + 1}`
         })
         
-        const dataRows = rawData.slice(headerRowIndex + 1) as unknown[][]
+        const dataRows = bestRawData.slice(bestHeaderRowIndex + 1) as unknown[][]
         const rows: ExcelRow[] = dataRows.map((row) => {
           const rowObj: ExcelRow = {}
           row.forEach((value, index) => {
@@ -83,7 +135,7 @@ export function parseExcel(file: File): Promise<{ headers: string[]; rows: Excel
           return rowObj
         }).filter(row => Object.values(row).some(v => v !== undefined && v !== null && String(v).trim() !== ''))
         
-        resolve({ headers, rows })
+        resolve({ headers, rows, sheetName: selectedSheetName })
       } catch (error) {
         reject(new Error('Excel解析失败，请确保文件格式正确'))
       }

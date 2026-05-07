@@ -1,17 +1,23 @@
-import { Save } from 'lucide-react'
+import { Save, Plus, Trash2 } from 'lucide-react'
 import { useMemo, useState } from 'react'
 import { FieldMapping as FieldMappingType, SYSTEM_FIELDS } from '@/lib/types'
 
 interface FieldMappingProps {
   headers: string[]
   mappings: FieldMappingType[]
+  onMappingsChange: (mappings: FieldMappingType[]) => void
 }
 
-export function FieldMapping({ headers, mappings }: FieldMappingProps) {
+export function FieldMapping({ headers, mappings, onMappingsChange }: FieldMappingProps) {
   const [templateName, setTemplateName] = useState('')
 
   const mappedExcelColumns = useMemo(
     () => new Set(mappings.map(mapping => mapping.excelColumn)),
+    [mappings]
+  )
+
+  const mappedSystemFields = useMemo(
+    () => new Set(mappings.map(mapping => mapping.systemField)),
     [mappings]
   )
 
@@ -22,10 +28,39 @@ export function FieldMapping({ headers, mappings }: FieldMappingProps) {
 
   const missingSystemFields = useMemo(
     () => SYSTEM_FIELDS.filter(
-      field => !mappings.some(mapping => mapping.systemField === field.field)
+      field => !mappedSystemFields.has(field.field)
     ),
-    [mappings]
+    [mappedSystemFields]
   )
+
+  const handleExcelColumnChange = (index: number, newColumn: string) => {
+    const newMappings = [...mappings]
+    newMappings[index] = { ...newMappings[index], excelColumn: newColumn }
+    onMappingsChange(newMappings)
+  }
+
+  const handleSystemFieldChange = (index: number, newField: string) => {
+    const newMappings = [...mappings]
+    newMappings[index] = { ...newMappings[index], systemField: newField as any }
+    onMappingsChange(newMappings)
+  }
+
+  const addMapping = () => {
+    const availableHeaders = headers.filter(h => !mappedExcelColumns.has(h))
+    const availableFields = SYSTEM_FIELDS.filter(f => !mappedSystemFields.has(f.field))
+
+    if (availableHeaders.length > 0 && availableFields.length > 0) {
+      onMappingsChange([
+        ...mappings,
+        { excelColumn: availableHeaders[0], systemField: availableFields[0].field }
+      ])
+    }
+  }
+
+  const removeMapping = (index: number) => {
+    const newMappings = mappings.filter((_, i) => i !== index)
+    onMappingsChange(newMappings)
+  }
 
   const saveTemplate = () => {
     if (!templateName.trim()) return
@@ -41,7 +76,7 @@ export function FieldMapping({ headers, mappings }: FieldMappingProps) {
         <div>
           <h3 className="text-lg font-semibold text-gray-900">字段映射</h3>
           <p className="text-sm text-gray-500 mt-1">
-            系统已根据 Excel 列名自动匹配字段，无需人工添加。
+            系统已根据 Excel 列名自动匹配字段，也可手动调整。
           </p>
         </div>
         <div className="rounded-full bg-blue-100 px-3 py-1 text-sm text-blue-700 border border-blue-200">
@@ -76,24 +111,59 @@ export function FieldMapping({ headers, mappings }: FieldMappingProps) {
               <th className="border border-gray-200 px-4 py-2 text-left text-sm font-medium text-gray-700">Excel列名</th>
               <th className="border border-gray-200 px-4 py-2 text-left text-sm font-medium text-gray-700">系统字段</th>
               <th className="border border-gray-200 px-4 py-2 text-left text-sm font-medium text-gray-700">状态</th>
+              <th className="border border-gray-200 px-4 py-2 text-center text-sm font-medium text-gray-700">操作</th>
             </tr>
           </thead>
           <tbody>
-            {mappings.map((mapping) => {
+            {mappings.map((mapping, index) => {
               const fieldInfo = SYSTEM_FIELDS.find(field => field.field === mapping.systemField)
+              const availableHeaders = headers.filter(h => h !== mapping.excelColumn || 
+                mappings.filter(m => m.excelColumn === h).length > 1 || 
+                (!mappedExcelColumns.has(h) && h === mapping.excelColumn))
 
               return (
-                <tr key={`${mapping.excelColumn}-${mapping.systemField}`} className="border-b border-gray-100 hover:bg-gray-50">
-                  <td className="border-r border-gray-100 px-4 py-2 text-sm text-gray-900">
-                    {mapping.excelColumn}
+                <tr key={`${mapping.excelColumn}-${mapping.systemField}-${index}`} className="border-b border-gray-100 hover:bg-gray-50">
+                  <td className="border-r border-gray-100 px-4 py-2">
+                    <select
+                      value={mapping.excelColumn}
+                      onChange={(e) => handleExcelColumnChange(index, e.target.value)}
+                      className="w-full px-2 py-1 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
+                      <option value="">请选择 Excel 列</option>
+                      {headers.map(header => (
+                        <option key={header} value={header}>
+                          {header}
+                        </option>
+                      ))}
+                    </select>
                   </td>
-                  <td className="border-r border-gray-100 px-4 py-2 text-sm text-gray-900">
-                    {fieldInfo?.label || mapping.systemField}
+                  <td className="border-r border-gray-100 px-4 py-2">
+                    <select
+                      value={mapping.systemField}
+                      onChange={(e) => handleSystemFieldChange(index, e.target.value)}
+                      className="w-full px-2 py-1 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
+                      <option value="">请选择系统字段</option>
+                      {SYSTEM_FIELDS.map(field => (
+                        <option key={field.field} value={field.field}>
+                          {field.label} {field.required ? '(必填)' : ''}
+                        </option>
+                      ))}
+                    </select>
                   </td>
-                  <td className="px-4 py-2 text-sm">
+                  <td className="border-r border-gray-100 px-4 py-2 text-sm">
                     <span className="inline-flex rounded-full bg-green-100 px-2 py-1 text-green-700 border border-green-200">
-                      已自动匹配
+                      已匹配
                     </span>
+                  </td>
+                  <td className="px-4 py-2">
+                    <button
+                      onClick={() => removeMapping(index)}
+                      className="text-red-500 hover:text-red-600 p-1"
+                      title="删除映射"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                    </button>
                   </td>
                 </tr>
               )
@@ -102,9 +172,20 @@ export function FieldMapping({ headers, mappings }: FieldMappingProps) {
         </table>
       </div>
 
+      {(missingSystemFields.length > 0 || unmappedHeaders.length > 0) && (
+        <button
+          onClick={addMapping}
+          disabled={unmappedHeaders.length === 0 || missingSystemFields.length === 0}
+          className="mt-4 w-full px-4 py-2 border border-dashed border-gray-300 rounded-lg text-gray-500 hover:border-blue-500 hover:text-blue-500 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+        >
+          <Plus className="w-4 h-4" />
+          添加映射
+        </button>
+      )}
+
       {mappings.length === 0 && (
         <div className="text-center text-amber-600 py-8">
-          未识别到可用字段映射，请检查 Excel 表头命名。
+          未识别到可用字段映射，请检查 Excel 表头命名或手动添加映射。
         </div>
       )}
 
