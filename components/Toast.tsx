@@ -24,19 +24,19 @@ export function Toast({ messages, onRemove }: ToastProps) {
           key={message.id}
           className={`
             toast-enter
-            flex items-center gap-3 px-4 py-3 rounded-xl shadow-xl backdrop-blur
-            ${message.type === 'success' ? 'bg-green-900/80 text-green-200 border border-green-700 shadow-green-500/20' : ''}
-            ${message.type === 'error' ? 'bg-red-900/80 text-red-200 border border-red-700 shadow-red-500/20' : ''}
-            ${message.type === 'info' ? 'bg-blue-900/80 text-blue-200 border border-blue-700 shadow-blue-500/20' : ''}
+            flex items-center gap-3 px-4 py-3 rounded-xl shadow-lg
+            ${message.type === 'success' ? 'bg-white text-green-700 border border-green-200' : ''}
+            ${message.type === 'error' ? 'bg-white text-red-700 border border-red-200' : ''}
+            ${message.type === 'info' ? 'bg-white text-blue-700 border border-blue-200' : ''}
           `}
         >
-          {message.type === 'success' && <CheckCircle className="w-5 h-5" />}
-          {message.type === 'error' && <XCircle className="w-5 h-5" />}
-          {message.type === 'info' && <Info className="w-5 h-5" />}
+          {message.type === 'success' && <CheckCircle className="w-5 h-5 text-green-500" />}
+          {message.type === 'error' && <XCircle className="w-5 h-5 text-red-500" />}
+          {message.type === 'info' && <Info className="w-5 h-5 text-blue-500" />}
           <span className="flex-1">{message.message}</span>
           <button
             onClick={() => onRemove(message.id)}
-            className="hover:opacity-70"
+            className="hover:opacity-70 text-gray-500"
           >
             <X className="w-4 h-4" />
           </button>

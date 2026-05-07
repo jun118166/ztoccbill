@@ -174,14 +174,14 @@ export function ImportPanel() {
     <div className="max-w-[95vw] mx-auto p-4">
       <Toast messages={toasts} onRemove={removeToast} />
 
-      <div className="bg-gray-800/50 backdrop-blur rounded-xl border border-gray-700 shadow-xl shadow-blue-900/10 p-6 mb-6">
+      <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6 mb-6">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+          <h2 className="text-xl font-bold text-gray-900">
             Excel订单导入
           </h2>
           <button
             onClick={resetState}
-            className="flex items-center gap-1 px-3 py-1.5 text-sm bg-gray-700/50 text-gray-300 rounded-lg hover:bg-gray-600/50 transition-all"
+            className="flex items-center gap-1 px-3 py-1.5 text-sm bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-all"
           >
             <RefreshCw className="w-4 h-4" />
             重新开始
@@ -194,7 +194,7 @@ export function ImportPanel() {
             className={`px-5 py-2.5 rounded-lg transition-all ${
               step === 'upload'
                 ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg shadow-blue-500/30'
-                : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50 hover:text-white'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
           >
             1. 上传文件
@@ -205,7 +205,7 @@ export function ImportPanel() {
             className={`px-5 py-2.5 rounded-lg transition-all ${
               step === 'mapping'
                 ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg shadow-blue-500/30'
-                : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50 hover:text-white'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             } disabled:opacity-50`}
           >
             2. 字段映射
@@ -216,7 +216,7 @@ export function ImportPanel() {
             className={`px-5 py-2.5 rounded-lg transition-all ${
               step === 'preview'
                 ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg shadow-blue-500/30'
-                : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50 hover:text-white'
+                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             } disabled:opacity-50`}
           >
             3. 数据预览
@@ -226,7 +226,7 @@ export function ImportPanel() {
 
       {step === 'upload' && (
         <div
-          className="bg-gray-800/50 backdrop-blur rounded-xl border-2 border-dashed border-gray-600 hover:border-blue-500 transition-all p-12 text-center cursor-pointer shadow-xl shadow-blue-900/10"
+          className="bg-white rounded-xl border-2 border-dashed border-gray-300 hover:border-blue-500 transition-all p-12 text-center cursor-pointer shadow-sm"
           onDrop={handleDrop}
           onDragOver={handleDragOver}
           onClick={() => document.getElementById('file-upload')?.click()}
@@ -238,11 +238,11 @@ export function ImportPanel() {
             onChange={handleFileChange}
             className="hidden"
           />
-          <Upload className="w-16 h-16 mx-auto text-blue-400 mb-4" />
-          <h3 className="text-lg font-medium text-gray-200 mb-2">
+          <Upload className="w-16 h-16 mx-auto text-blue-500 mb-4" />
+          <h3 className="text-lg font-medium text-gray-900 mb-2">
             {file ? `已选择：${file.name}` : '拖拽 Excel 文件到此处或点击上传'}
           </h3>
-          <p className="text-sm text-gray-400">支持 .xls 和 .xlsx 格式</p>
+          <p className="text-sm text-gray-500">支持 .xls 和 .xlsx 格式</p>
 
           {file && (
             <button
@@ -275,7 +275,7 @@ export function ImportPanel() {
           <div className="flex justify-end gap-3">
             <button
               onClick={() => setStep('upload')}
-              className="px-5 py-2.5 bg-gray-700/50 text-gray-300 rounded-lg hover:bg-gray-600/50 hover:text-white transition-all"
+              className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-all"
             >
               返回
             </button>
@@ -294,16 +294,16 @@ export function ImportPanel() {
         <div className="space-y-6">
           <DataTable rows={parsedRows} onRowsChange={setParsedRows} />
 
-          <div className="bg-gray-800/50 backdrop-blur rounded-xl border border-gray-700 shadow-xl shadow-blue-900/10 p-4">
+          <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-4">
             <div className="flex items-center justify-between">
-              <div className="flex gap-4 text-sm text-gray-300">
+              <div className="flex gap-4 text-sm text-gray-700">
                 <span>总条数：{parsedRows.length}</span>
-                {hasErrors && <span className="text-red-400">存在错误，请修正后再提交</span>}
+                {hasErrors && <span className="text-red-500">存在错误，请修正后再提交</span>}
               </div>
               <div className="flex gap-3">
                 <button
                   onClick={() => setStep('mapping')}
-                  className="px-5 py-2.5 bg-gray-700/50 text-gray-300 rounded-lg hover:bg-gray-600/50 hover:text-white transition-all"
+                  className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-all"
                 >
                   返回映射
                 </button>
